@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=yes, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Series !</title>
+</head>
+<body>
+<h1>Testou</h1>
+<div>
+    {# commentaire ! #}
+    {% set name ="Guillaume" %}
+    <h2>{{ name }}</h2>
+
+    {# crée un tableau #}
+
+    {% set colors = ["orange", "blue", "pink"] %}
+    {% for color in colors  %}
+    <p style="background-color: {{ color }} ">{{ color }}</p>
+    {% endfor %}
+
+    {# un objet #}
+    {% set book = {
+    title: 'PifPaf',
+    year: 2000,
+    author: 'John Doe'}
+    %}
+    <h3>{{ book.author }}</h3>
+
+    <div>
+        {% for key, val in book %}
+        <div>{{ key }}: {{ val }}</div>
+    {% endfor %}
+    </div>
+
+</div>
+
+
+
+</body>
+</html>
