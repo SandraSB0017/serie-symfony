@@ -2,10 +2,12 @@
 
 {% block title %}{{parent()}} | Test{% endblock %}
 
-{% block body %}}
+{% block body %}
 
 
 <h1>Testou</h1>
+
+    <div>{{ mySerie.title }},{{ autreVar }}</div>
 <div>
 
     <div>{{"now"|date('d/m/Y')}}</div>

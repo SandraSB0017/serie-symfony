@@ -6,28 +6,34 @@
           content="width=device-width, user-scalable=yes, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible "content="ie=edge">
     <title>{% block title %}Series!{% endblock %}</title>
+    <link rel="stylesheet" href="<link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/normalize.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('img/icon.png') }}">
 </head>
 <body>
+<div class="container">
+    <header>
+         <h1><a href="{{ path('main_home') }}"><img src="{{ asset('img/logo.svg') }}" alt="series!"></a></h1>
 
-<header>
-    <h1>Serie!</h1>
-
-    {% include('inc/nav.html.twig') %}
+         {% include('inc/nav.html.twig') %}
 
 
-</header>
+    </header>
 
-<main>
+    <main>
 
-    {% block body %} {% endblock %}
+        {% block body %} {% endblock %}
 
-</main>
+    </main>
 
-<footer>
-    {% include('inc/nav.html.twig') %}
-    <div>&copy; {{ "now"|date("Y") }}series!</div>
+    <footer>
+        {% include('inc/nav.html.twig') %}
+        <div>&copy; {{ "now"|date("Y") }}series!</div>
 
-</footer>
-
+    </footer>
+</div>
 </body>
 </html>
